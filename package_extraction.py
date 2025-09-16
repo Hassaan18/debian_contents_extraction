@@ -8,7 +8,7 @@ It first tries to download the .gz version of the Contents file, and if that fai
 Default mirror: http://ftp.uk.debian.org/debian/dists/stable/main/
 
 Usage:
-    ./package_statistics.py amd64 --top 10 --mirror http://ftp.uk.debian.org/debian --suite stable --component main
+    ./package_extraction.py amd64 --top 10 --mirror http://ftp.uk.debian.org/debian --suite stable --component main
 
 """
 
@@ -143,9 +143,9 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
         epilog=textwrap.dedent(
             f"""\
             Function call expamples:
-                package_statistics.py amd64
-                package_statistics.py arm64 --top 20
-                package_statistics.py mipsel --mirror {DEFAULT_MIRROR} --suite stable --component main
+                package_extraction.py amd64
+                package_extraction.py arm64 --top 20
+                package_extraction.py mipsel --mirror {DEFAULT_MIRROR} --suite stable --component main
             """
         ),
     )

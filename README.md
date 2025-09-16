@@ -11,8 +11,8 @@ However, this can be changed by parsing another mirror using **--mirror** arg.
 
 - Builds the expected Contents file URL for the given architecture: `Contents-<arch>.gz` (falls back to `Contents-<arch>.xz`).
 - Streams and decompresses the file from the Debian mirror using Python **standard libraries** (`urllib`, `gzip`, `lzma`).
-- Parses each line (`<path> <packages>`) and counts one file for **each package** listed on that line 
-    Note: The **Contents format** is documented by Debian: https://wiki.debian.org/RepositoryFormat#A.22Contents.22_indices
+- Parses each line (`<path> <packages>`) and counts one file for **each package** listed on that line. 
+- **Note**: The **Contents format** is documented by Debian: https://wiki.debian.org/RepositoryFormat#A.22Contents.22_indices
 - Sorts the packages by descending file count and prints the top `N` packages with highest file count in a tabular form.
 
 ---
